@@ -1,0 +1,230 @@
+/*Vars*/
+:root {
+    --letter-color: #d4dbe0;
+    --secondary-color: #085159;
+    --primary-color: #062026;
+    --button-color: #083040;
+    --button-hover-color: #083540;
+    --white: #ffffff;
+    --black: #000000;
+    --title-size: 40px;
+    --bg: #3C465C;
+    --primary: #ffffff;
+    --solid: rgb(255, 255, 255);
+    --btn-w: 10em;
+    --dot-w: calc(var(--btn-w)*.2);
+    --tr-X: calc(var(--btn-w) - var(--dot-w));
+}
+/*Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marcellus', serif;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/*Navbar*/
+
+#nav {
+    top: 0;
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 105;
+}
+
+.nav__ul--left {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.nav__ul--right {
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.nav__li--left {
+    display: inline-block;
+}
+
+.nav__li--right {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.nav__li--right > a {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 20px;
+}
+
+.nav__li--left > a {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: var(--title-size);
+    font-family: 'Tangerine', cursive;
+}
+
+.nav__li--right > a:hover {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+.nav__li--left > a:hover {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--title-size);
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+/*Floats menu*/
+
+.nav__menu--float--inmobiliaria {
+    margin-top: 0px;
+    position: absolute;
+    background-color: #2cb7c78c;
+    width: 100px;
+    height: 120px;
+    right: 200px;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.7);
+    display: none;
+    animation-name: show__menu--inmobiliaria;
+    animation-duration: 0.5s;
+}
+
+.nav__menu--float--abogado {
+    margin-top: 0px;
+    position: absolute;
+    background-color: #2cb7c78c;
+    width: 100px;
+    height: 120px;
+    right: 40px;
+    display: flex;
+    align-items: baseline;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.7);
+    display: none;
+    animation-name: show__menu--inmobiliaria;
+    animation-duration: 0.5s;
+}
+
+.nav__menu--li {
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+
+.nav__menu--li > a{
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.nav__menu--li > a:hover{
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 10px;
+    text-shadow: 0px 0px 6px #000000;
+}
+
+@keyframes show__menu--inmobiliaria {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/*Section*/
+
+.section__home {
+    margin-top: 80px;
+    width: 100%;
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+}
+
+.section__home > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title__home--abogado {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    bottom: 150px;
+    font-size: 40px;
+    color: var(--white);
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.title__home--inmobiliaria {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    margin-top: 150px;
+    font-size: 40px;
+    color: var(--white);
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+
+/*Buttons Section*/
+
+.btn__home--abogado {
+    color: var(--white);
+    padding: 10px;
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    background-color: #0851598c;
+    font-size: 15px;
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.btn__home--inmobiliaria {
+    padding: 10px;
+    height: 40px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    background-color: #0851598c;
+    font-size: 15px;
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.btn__home--inmobiliaria > a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn__home--abogado > a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn__home--inmobiliaria:hover {
+    background-color: #2cb7c78c;
+}
+
+.btn__home--abogado:hover {
+    background-color: #2cb7c78c;
+}
