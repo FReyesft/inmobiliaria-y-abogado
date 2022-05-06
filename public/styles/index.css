@@ -152,7 +152,7 @@ body {
 /*Section*/
 
 .section__home {
-    margin-top: 80px;
+    margin-top: 100px;
     width: 100%;
     height: 91vh;
     display: flex;
@@ -227,4 +227,49 @@ body {
 
 .btn__home--abogado:hover {
     background-color: #2cb7c78c;
+}
+
+/*Footer*/
+
+.footer {
+    height: 300px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__title {
+    margin-left: 30%;
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 70px;
+    font-family: 'Tangerine', cursive;
+    font-weight: lighter;
+}
+
+.footer__div--title {
+    color:  var(--white);
+    font-size: 25px;
+}
+
+.footer__div {
+    margin-right: 30%;
+}
+
+.footer__ul--contacto {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer__ul--contacto--li >  a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__ul--contacto--li {
+    margin-top: 15px;
+    font-size: 15px;
 }
