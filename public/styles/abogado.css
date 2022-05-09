@@ -527,6 +527,12 @@ a {
     .nav__menu--li--mobile {
         font-size: 13px;
     }
+
+    .nav__menu--li--mobile > a {
+        font-size: 13px;
+        color: var(--white);
+        text-decoration: none;
+    }
     
     .nav__menu--li--mobile:hover {
         font-size: 13px;

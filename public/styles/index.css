@@ -515,4 +515,10 @@ a {
     text-shadow: 0px 0px 6px #ffffff;
 }
 
+.nav__menu--li--mobile > a {
+    font-size: 13px;
+    color: var(--white);
+    text-decoration: none;
+}
+
 }
