@@ -28,6 +28,11 @@ body {
     background-color: var(--primary-color);
 }
 
+a {
+    cursor: pointer;
+    user-select: none;
+}
+
 /*Navbar*/
 
 #nav {
@@ -136,9 +141,10 @@ body {
 /*Floats menu*/
 
 .nav__menu--float--inmobiliaria {
-    margin-top: 0px;
+    margin-top: -20px;
     position: absolute;
-    background-color: #2cb7c78c;
+    position: fixed;
+    background-color: var(--secondary-color);
     width: 100px;
     height: 120px;
     right: 200px;
@@ -149,9 +155,10 @@ body {
 }
 
 .nav__menu--float--abogado {
-    margin-top: 0px;
+    margin-top: -20px;
     position: absolute;
-    background-color: #2cb7c78c;
+    position: fixed;
+    background-color: var(--secondary-color);
     width: 100px;
     height: 120px;
     right: 40px;
@@ -210,6 +217,15 @@ body {
     width: 100%;
     object-fit: cover;
 }
+
+.atribucion {
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    color: var(--white);
+    font-size: 10px;
+}
+
 
 .title__home--abogado {
     width: 200px;
@@ -278,6 +294,7 @@ body {
 /*Footer*/
 
 .footer {
+    bottom: 0;
     height: 300px;
     padding: 20px;
     margin-top: 20px;
@@ -387,6 +404,14 @@ body {
     object-fit: cover;
 }
 
+.atribucion {
+    position: absolute;
+    bottom: -35px;
+    right: 5px;
+    color: var(--white);
+    font-size: 10px;
+}
+
 /*Footer*/
 
 .footer {
@@ -453,6 +478,7 @@ body {
 
 
 #nav__menu--mobile--open {
+    margin-top:  -20px;
     position: fixed;
     display: none;
     background-color: var(--secondary-color);
@@ -463,6 +489,7 @@ body {
     animation-name: open-menu;
     animation-duration: 1.5s;
     z-index: 50;
+    border-top: 1px solid var(--white);
 }
 
 .nav__menu--title--mobile--inmobiliaria {

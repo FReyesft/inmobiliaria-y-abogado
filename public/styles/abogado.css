@@ -1,0 +1,567 @@
+:root {
+    --letter-color: #d4dbe0;
+    --secondary-color: #085159;
+    --primary-color: #062026;
+    --button-color: #083040;
+    --button-hover-color: #083540;
+    --white: #ffffff;
+    --black: #000000;
+    --title-size: 40px;
+    --bg: #3C465C;
+    --primary: #ffffff;
+    --solid: rgb(255, 255, 255);
+    --btn-w: 10em;
+    --dot-w: calc(var(--btn-w)*.2);
+    --tr-X: calc(var(--btn-w) - var(--dot-w));
+    --text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marcellus', serif;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+a {
+    cursor: pointer;
+}
+
+/*Navbar*/
+
+#nav {
+    top: 0;
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 105;
+}
+
+.nav__ul--left {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.nav__ul--right {
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.nav__li--left {
+    display: inline-block;
+}
+
+.nav__li--right {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.nav__li--right > a {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 20px;
+}
+
+.nav__li--left > a {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: var(--title-size);
+    font-family: 'Tangerine', cursive;
+}
+
+.nav__li--right > a:hover {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+.nav__li--left > a:hover {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--title-size);
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+/*Menu mobile*/
+
+#nav__menu--mobile > span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: var(--black);
+}
+
+#nav__menu--mobile > span:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#nav__menu--mobile, #nav__menu--mobile > span {
+    transition: all .4s ease-in-out;
+}
+
+#nav__menu--mobile.active {
+    transition-delay: 0.8;
+    transform: rotate(45deg);
+}
+
+#nav__menu--mobile.active > span:nth-child(1),
+#nav__menu--mobile.active > span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#nav__menu--mobile.active > span:nth-child(1) {
+    transform: translateY(-9px) rotate(90deg); 
+}
+
+#nav__menu--mobile {
+    display: none;
+}
+
+/*Nav menu movile*/
+
+#nav__menu--mobile {
+    display: none;
+}
+
+/*Floats menu*/
+
+.nav__menu--float--inmobiliaria {
+    margin-top: -20px;
+    position: absolute;
+    position: fixed;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 120px;
+    right: 200px;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.7);
+    display: none;
+    animation-name: show__menu--inmobiliaria;
+    animation-duration: 0.5s;
+}
+
+.nav__menu--float--abogado {
+    margin-top: -20px;
+    position: absolute;
+    position: fixed;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 120px;
+    right: 40px;
+    display: flex;
+    align-items: baseline;
+    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.7);
+    display: none;
+    animation-name: show__menu--inmobiliaria;
+    animation-duration: 0.5s;
+}
+
+.nav__menu--li {
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+
+.nav__menu--li > a{
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.nav__menu--li > a:hover{
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 10px;
+    text-shadow: 0px 0px 6px #000000;
+}
+
+#nav__menu--mobile--open {
+    display: none;
+}
+
+@keyframes show__menu--inmobiliaria {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*Section*/
+
+.section__title {
+    position: absolute;
+    color: var(--white);
+    font-weight: lighter;
+    left: 10%;
+    margin-top: 150px;
+    font-size: 40px;
+    width: 60%;
+    text-shadow: var(--text-shadow);
+}
+
+.section__home {
+    margin-top: 100px;
+    width: 100%;
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+}
+
+.section__home > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.atribucion {
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    color: var(--white);
+    font-size: 10px;
+}
+
+.footer {
+    height: 300px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__title {
+    margin-left: 30%;
+    text-decoration: none;
+    color: var(--letter-color);
+    margin-right: 20px;
+    font-size: 70px;
+    font-family: 'Tangerine', cursive;
+    font-weight: lighter;
+}
+
+.footer__div--title {
+    color:  var(--white);
+    font-size: 25px;
+}
+
+.footer__div {
+    margin-right: 30%;
+}
+
+.footer__ul--contacto {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer__ul--contacto--li >  a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__ul--contacto--li {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.footer__ul--contacto--li > a:hover {
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+/*Section 02*/
+
+.section--information{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    flex-direction: column;
+}
+
+.section__div {
+    width: 60%;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #2cb7c736;
+}
+
+.section__title--information {
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--white);
+}
+
+.section__paragraf--information {
+    margin-top: 15px;
+    font-size: 17px;
+    color: var(--white);
+    font-weight: lighter;
+}
+
+/*Section Services*/
+
+.section__services {
+    padding: 0px 50px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.section__target--services {
+    background-color: #2cb7c736;
+    padding: 20px;
+    width: 300px;
+    height: 100%;
+    margin-top: 20px;
+    border: 1px solid var(--white);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.section__target--services > h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.section__target--services > p {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.section__title--information02 {
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--white);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 670px) {
+    .nav__ul--right {
+        list-style: none;
+        display: none;
+        margin-right: 50px;
+    }
+    
+    .nav__ul--left {
+        list-style: none;
+        display: inline-block;
+        margin-left: 100px;
+    }
+    
+    /*Menu mobile*/
+    
+    #nav__menu--mobile{
+        display: block;
+        position: absolute;
+        margin-left: 10px;
+    }
+    
+    #nav__menu--mobile > span {
+        display: block;
+        width: 23px;
+        height: 2px;
+        border-radius: 9999px;
+        background-color: var(--white);
+    }
+    
+    #nav__menu--mobile > span:not(:last-child) {
+        margin-bottom: 7px;
+    }
+    
+    #nav__menu--mobile, #nav__menu--mobile > span {
+        transition: all .4s ease-in-out;
+    }
+    
+    #nav__menu--mobile.active {
+        transition-delay: 0.8;
+        transform: rotate(45deg);
+    }
+    
+    #nav__menu--mobile.active > span:nth-child(1),
+    #nav__menu--mobile.active > span:nth-child(3) {
+        transition-delay: .4s;
+    }
+    
+    #nav__menu--mobile.active > span:nth-child(3) {
+        transform: translateY(-9px) rotate(90deg); 
+    }
+    
+    #nav__menu--mobile.active > span:nth-child(1) {
+        display: none;
+        transition-delay: .4s;
+    }
+    
+    .section__home > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .atribucion {
+        position: absolute;
+        bottom: -35px;
+        right: 5px;
+        color: var(--white);
+        font-size: 10px;
+    }
+    
+    /*Footer*/
+    
+    .footer {
+        height: 300px;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer__title {
+        margin-left: 5%;
+        text-decoration: none;
+        color: var(--letter-color);
+        font-size: 60px;
+        font-family: 'Tangerine', cursive;
+        font-weight: lighter;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid var(--white);
+    }
+    
+    .footer__div--title {
+        color:  var(--white);
+        font-size: 20px;
+    }
+    
+    .footer__div {
+        margin-right: 30%;
+    }
+    
+    .footer__ul--contacto {
+        list-style: none;
+        margin-top: 20px;
+    }
+    
+    .footer__ul--contacto--li >  a {
+        text-decoration: none;
+        color: var(--white);
+    }
+    
+    .footer__ul--contacto--li {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+    
+    .footer__ul--contacto--li > a:hover {
+        text-shadow: 0px 0px 6px #ffffff;
+    }
+    
+    /*Nav menu mobile*/
+    
+    @keyframes open-menu {
+        0% {
+            transform: translateY(-400px);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    
+    #nav__menu--mobile--open {
+        margin-top:  -20px;
+        position: fixed;
+        display: none;
+        background-color: var(--secondary-color);
+        width: 150px;
+        padding: 20px;
+        z-index: 150;
+        border-radius: 0 10px 10px 10px;
+        animation-name: open-menu;
+        animation-duration: 1.5s;
+        z-index: 50;
+        border-top: 1px solid var(--white);
+    }
+    
+    .nav__menu--title--mobile--inmobiliaria {
+        margin-top: 20px;
+    }
+    
+    .nav__menu--title--mobile {
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+    
+    #nav__menu--mobile--open ul > li {
+        color: var(--white);
+        list-style: none;
+    }
+    
+    .nav__menu--li--mobile {
+        font-size: 13px;
+    }
+    
+    .nav__menu--li--mobile:hover {
+        font-size: 13px;
+        text-shadow: 0px 0px 6px #ffffff;
+    }
+
+    .section--information{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;   
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .section__div {
+        width: 80%;
+        padding: 30px;
+        margin-top: 20px;
+        background-color: #2cb7c736;
+    }
+    
+    .section__title--information {
+        margin-top: 50px;
+        font-size: 35px;
+        font-weight: lighter;
+        color: var(--white);
+    }
+    
+    .section__paragraf--information {
+        margin-top: 15px;
+        font-size: 17px;
+        color: var(--white);
+        font-weight: lighter;
+    }
+    
+    
+    }
