@@ -91,6 +91,48 @@ body {
     text-shadow: 0px 0px 6px #ffffff;
 }
 
+/*Menu mobile*/
+
+#nav__menu--mobile > span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: var(--black);
+}
+
+#nav__menu--mobile > span:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#nav__menu--mobile, #nav__menu--mobile > span {
+    transition: all .4s ease-in-out;
+}
+
+#nav__menu--mobile.active {
+    transition-delay: 0.8;
+    transform: rotate(45deg);
+}
+
+#nav__menu--mobile.active > span:nth-child(1),
+#nav__menu--mobile.active > span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#nav__menu--mobile.active > span:nth-child(1) {
+    transform: translateY(-9px) rotate(90deg); 
+}
+
+#nav__menu--mobile {
+    display: none;
+}
+
+/*Nav menu movile*/
+
+#nav__menu--mobile {
+    display: none;
+}
+
 /*Floats menu*/
 
 .nav__menu--float--inmobiliaria {
@@ -141,6 +183,10 @@ body {
     text-shadow: 0px 0px 6px #000000;
 }
 
+#nav__menu--mobile--open {
+    display: none;
+}
+
 @keyframes show__menu--inmobiliaria {
     0% {
         transform: translateY(-150px);
@@ -160,8 +206,8 @@ body {
 }
 
 .section__home > img {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -245,6 +291,7 @@ body {
     margin-left: 30%;
     text-decoration: none;
     color: var(--letter-color);
+    margin-right: 20px;
     font-size: 70px;
     font-family: 'Tangerine', cursive;
     font-weight: lighter;
@@ -272,4 +319,173 @@ body {
 .footer__ul--contacto--li {
     margin-top: 15px;
     font-size: 15px;
+}
+
+.footer__ul--contacto--li > a:hover {
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+@media screen and (max-width: 670px) {
+.nav__ul--right {
+    list-style: none;
+    display: none;
+    margin-right: 50px;
+}
+
+.nav__ul--left {
+    list-style: none;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+/*Menu mobile*/
+
+#nav__menu--mobile{
+    display: block;
+    position: absolute;
+    margin-left: 10px;
+}
+
+#nav__menu--mobile > span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: var(--white);
+}
+
+#nav__menu--mobile > span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+#nav__menu--mobile, #nav__menu--mobile > span {
+    transition: all .4s ease-in-out;
+}
+
+#nav__menu--mobile.active {
+    transition-delay: 0.8;
+    transform: rotate(45deg);
+}
+
+#nav__menu--mobile.active > span:nth-child(1),
+#nav__menu--mobile.active > span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#nav__menu--mobile.active > span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg); 
+}
+
+#nav__menu--mobile.active > span:nth-child(1) {
+    display: none;
+    transition-delay: .4s;
+}
+
+.section__home > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Footer*/
+
+.footer {
+    height: 300px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__title {
+    margin-left: 5%;
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 60px;
+    font-family: 'Tangerine', cursive;
+    font-weight: lighter;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid var(--white);
+}
+
+.footer__div--title {
+    color:  var(--white);
+    font-size: 20px;
+}
+
+.footer__div {
+    margin-right: 30%;
+}
+
+.footer__ul--contacto {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer__ul--contacto--li >  a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer__ul--contacto--li {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.footer__ul--contacto--li > a:hover {
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+/*Nav menu mobile*/
+
+@keyframes open-menu {
+    0% {
+        transform: translateY(-400px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+#nav__menu--mobile--open {
+    position: fixed;
+    display: none;
+    background-color: var(--secondary-color);
+    width: 150px;
+    padding: 20px;
+    z-index: 150;
+    border-radius: 0 10px 10px 10px;
+    animation-name: open-menu;
+    animation-duration: 1.5s;
+    z-index: 50;
+}
+
+.nav__menu--title--mobile--inmobiliaria {
+    margin-top: 20px;
+}
+
+.nav__menu--title--mobile {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+#nav__menu--mobile--open ul > li {
+    color: var(--white);
+    list-style: none;
+}
+
+.nav__menu--li--mobile {
+    font-size: 13px;
+}
+
+.nav__menu--li--mobile:hover {
+    font-size: 13px;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
 }
