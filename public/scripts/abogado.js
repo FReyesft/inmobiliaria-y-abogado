@@ -10,7 +10,7 @@ function sendMessage() {
     let name = document.querySelector(".name").value;
     let lastName = document.querySelector(".last-name").value;
     let message = document.querySelector(".input-message").value;
-    let strigToSend = `${name} ${lastName} dice: ${message}`;
+    let strigToSend = `Tema: Abogado ${name} ${lastName} ${message}`;
     document.querySelector(".float01").href = `https://api.whatsapp.com/send?phone=+1 3124147546&text=${strigToSend}`;
 }
 
