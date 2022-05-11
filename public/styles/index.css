@@ -78,7 +78,7 @@ a {
 .nav__li--left > a {
     text-decoration: none;
     color: var(--letter-color);
-    font-size: var(--title-size);
+    font-size: 40px;
     font-family: 'Tangerine', cursive;
 }
 
@@ -352,7 +352,7 @@ a {
 .nav__ul--left {
     list-style: none;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 /*Menu mobile*/
@@ -519,6 +519,20 @@ a {
     font-size: 13px;
     color: var(--white);
     text-decoration: none;
+}
+
+.nav__li--left > a {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 30px;
+    font-family: 'Tangerine', cursive;
+}
+
+.nav__li--left > a:hover {
+    text-decoration: none;
+    color: var(--letter-color);
+    font-size: 30px;
+    font-family: 'Tangerine', cursive;
 }
 
 }

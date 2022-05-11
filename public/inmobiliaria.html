@@ -20,6 +20,7 @@
     />
     <!--Styles-->
     <link href="./styles/index.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/abogado.css" rel="stylesheet" type="text/css" />
     <!--Title-->
     <title>Abogado.Inmobiliaria</title>
   </head>
@@ -71,19 +72,23 @@
         src="./assets/img-section.jpg"
       />
       <h2 class="title__home--inmobiliaria">
-        Inmobiliaria<br />
-        <button class="btn__home--inmobiliaria">
-          <a href="#">Ver más</a>
-        </button>
+        Inmobiliaria
       </h2>
-      <h2 class="title__home--abogado">
-        Abogado<br />
-        <button class="btn__home--abogado">
-          <a href="./abogado.html">Ver más</a>
-        </button>
       </h2>
       <a href='https://www.freepik.es/' class="atribucion">Imagenes extraidas de freepik.es</a>
     </div>
+    <section class="section__container--form" id="contactame">
+      <form class="form__container">
+        <h2 class="form__title">Contactanos</h2>
+        <label class="form__label" for="nombre">Nombre</label>
+        <input class="form__input name" type="text" name="nombre" placeholder="tu nombre">
+        <label class="form__label" for="last-name">Apellido</label>
+        <input class="form__input last-name" type="text" name="last-name" placeholder="tu apellido">
+        <label class="form__label" for="message">Mensaje</label>
+        <input class="form__input input-message" type="text" name="message" placeholder="tu mensaje">
+        <a href="https://api.whatsapp.com/send?phone=+1 3124147546&text=Me interesan los productos de Artcol Nativo" class="float01 form__send" target="_blank">Enviar</a>
+      </form>
+    </section>
     <footer class="footer">
       <h2 class="footer__title">Dr. Carlos Enrique Freyle Matiz</h2>
       <div class="footer__div">
@@ -101,6 +106,6 @@
         </ul>
       </div>
     </footer>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/abogado.js"></script>
   </body>
 </html>
