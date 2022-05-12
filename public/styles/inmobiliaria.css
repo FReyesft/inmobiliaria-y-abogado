@@ -461,10 +461,6 @@ a {
     width: 300px;
 }
 
-/*Overlay form*/
-
-
-
 
 @media screen and (max-width: 670px) {
 .nav__ul--right {
@@ -658,14 +654,6 @@ a {
     font-family: 'Tangerine', cursive;
 }
 
-.section__container--form {
-    display: none;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 .form__container {
     padding: 20px;
@@ -712,6 +700,12 @@ a {
 .input-message {
     height: 70px;
     border-radius: 5px 5px 5px 5px;
+}
+
+.section__container--servicios {
+    text-align: center;
+    width: 100%;
+    padding: 50px;
 }
 
 }
