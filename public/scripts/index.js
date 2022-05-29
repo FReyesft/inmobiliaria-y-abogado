@@ -27,23 +27,6 @@ buttonNav02.addEventListener('click', () => {
     }
 });
 
-const imagesWallpapers = [
-    './assets/img-section.jpg',
-    './assets/img-section02.jpg',
-]
-
-function changeWallpaper() {
-    let i = 0;
-    setInterval(function () {
-      document.slider01.src = imagesWallpapers[i];
-      i++;
-      if (i === imagesWallpapers.length) {
-        i = 0;
-      }
-    }, 7000);
-  }
-  changeWallpaper();
-
 navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     if (navMenu.classList.contains("active")) {
