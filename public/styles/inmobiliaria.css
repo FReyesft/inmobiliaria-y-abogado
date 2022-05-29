@@ -536,16 +536,18 @@ a {
 /*Footer*/
 .footer {
     height: 300px;
+    width: 100%;
     padding: 20px;
     margin-top: 20px;
     background-color: var(--secondary-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .footer__title {
-    margin-left: 5%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 4%;
     text-decoration: none;
     color: var(--letter-color);
     font-size: 40px;
@@ -553,7 +555,6 @@ a {
     font-weight: lighter;
     padding-right: 20px;
     margin-right: 20px;
-    border-right: 1px solid var(--white);
 }
 
 .footer__div--title {
@@ -562,7 +563,7 @@ a {
 }
 
 .footer__div {
-    margin-right: 30%;
+    margin-right: 30%;;
 }
 
 .footer__ul--contacto {
