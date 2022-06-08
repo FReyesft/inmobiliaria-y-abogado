@@ -77,8 +77,8 @@ a {
 .nav__li--left > a {
     text-decoration: none;
     color: var(--letter-color);
-    font-size: var(--title-size);
-    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    font-family: 'Marcellus', serif;
 }
 
 .nav__li--right > a:hover {
@@ -89,9 +89,6 @@ a {
 }
 
 .nav__li--left > a:hover {
-    text-decoration: none;
-    color: var(--white);
-    font-size: var(--title-size);
     text-shadow: 0px 0px 6px #ffffff;
 }
 
@@ -209,7 +206,7 @@ a {
     color: var(--white);
     font-weight: lighter;
     left: 10%;
-    margin-top: 150px;
+    margin-top: 400px;
     font-size: 40px;
     width: 60%;
     text-shadow: var(--text-shadow);
@@ -248,12 +245,12 @@ a {
 }
 
 .footer__title {
-    margin-left: 30%;
+    margin-left: 20%;
     text-decoration: none;
     color: var(--letter-color);
     margin-right: 20px;
-    font-size: 70px;
-    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+    font-family: 'Marcellus', serif;
     font-weight: lighter;
 }
 
@@ -319,8 +316,8 @@ a {
 
 /*Section Services*/
 
-.section__services {
-    padding: 0px 50px 50px 50px;
+.section__container--services {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -331,11 +328,9 @@ a {
     background-color: #2cb7c736;
     margin: 20px;
     padding: 20px;
-    width: 300px;
-    height: 495px;
+    width: 60%;
+    height: 100%;
     margin-top: 20px;
-    border: 1px solid var(--white);
-    border-radius: 10px 10px 10px 10px;
 }
 
 .section__target--services > h3 {
@@ -424,6 +419,16 @@ a {
 }
 
 @media screen and (max-width: 670px) {
+
+    .section__target--services {
+        background-color: #2cb7c736;
+        margin: 20px;
+        padding: 20px;
+        width: 80%;
+        height: 100%;
+        margin-top: 20px;
+    }
+
     .nav__ul--right {
         list-style: none;
         display: none;
@@ -499,18 +504,6 @@ a {
         color: var(--white);
         font-size: 10px;
     }
-
-    .section__target--services {
-        background-color: #2cb7c736;
-        margin: 20px;
-        padding: 20px;
-        width: 300px;
-        height: 100%;
-        margin-top: 20px;
-        border: 1px solid var(--white);
-        border-radius: 10px 10px 10px 10px;
-    }
-    
     
     /*Footer*/
     
@@ -530,8 +523,8 @@ a {
         margin-left: 4%;
         text-decoration: none;
         color: var(--letter-color);
-        font-size: 40px;
-        font-family: 'Tangerine', cursive;
+        font-size: 25px;
+        font-family: 'Marcellus', serif;
         font-weight: lighter;
         padding-right: 20px;
         margin-right: 20px;
@@ -711,15 +704,15 @@ a {
     .nav__li--left > a {
         text-decoration: none;
         color: var(--letter-color);
-        font-size: 30px;
-        font-family: 'Tangerine', cursive;
+        font-size: 23px;
+        font-family: 'Marcellus', serif;
     }
     
     .nav__li--left > a:hover {
         text-decoration: none;
         color: var(--letter-color);
-        font-size: 30px;
-        font-family: 'Tangerine', cursive;
+        font-size: 23px;
+        font-family: 'Marcellus', serif;
     }
 
     .nav__ul--left {

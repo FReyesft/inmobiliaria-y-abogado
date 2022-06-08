@@ -78,8 +78,8 @@ a {
 .nav__li--left > a {
     text-decoration: none;
     color: var(--letter-color);
-    font-size: 40px;
-    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    font-family: 'Marcellus', serif;
 }
 
 .nav__li--right > a:hover {
@@ -92,7 +92,7 @@ a {
 .nav__li--left > a:hover {
     text-decoration: none;
     color: var(--white);
-    font-size: var(--title-size);
+    font-size: 30px;
     text-shadow: 0px 0px 6px #ffffff;
 }
 
@@ -384,12 +384,12 @@ a {
 }
 
 .footer__title {
-    margin-left: 30%;
+    margin-left: 20%;
     text-decoration: none;
     color: var(--letter-color);
     margin-right: 20px;
-    font-size: 70px;
-    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+    font-family: 'Marcellus', serif;
     font-weight: lighter;
 }
 
@@ -550,8 +550,8 @@ a {
     margin-left: 4%;
     text-decoration: none;
     color: var(--letter-color);
-    font-size: 40px;
-    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    font-family: 'Marcellus', serif;
     font-weight: lighter;
     padding-right: 20px;
     margin-right: 20px;
@@ -645,15 +645,15 @@ a {
 .nav__li--left > a {
     text-decoration: none;
     color: var(--letter-color);
-    font-size: 30px;
-    font-family: 'Tangerine', cursive;
+    font-size: 23px;
+    font-family: 'Marcellus', serif;
 }
 
 .nav__li--left > a:hover {
     text-decoration: none;
     color: var(--letter-color);
-    font-size: 30px;
-    font-family: 'Tangerine', cursive;
+    font-size: 23px;
+    font-family: 'Marcellus', serif;
 }
 
 
